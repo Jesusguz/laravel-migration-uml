@@ -1,0 +1,58 @@
+<idea-plugin>
+    <id>schematouml</id>
+    <name>SchemaToUML</name>
+    <version>1.0.0</version>
+
+    <vendor url="https://github.com/Jesusguz">Jesús Magdial Guzmán</vendor>
+
+    <description><![CDATA[
+        <h3>SchemaToUML - Fast ERD generator for Laravel</h3>
+        <p>Instant, offline and private UML & Mermaid ERD generation directly from your Laravel migrations to your clipboard.</p>
+
+        <h4>Features:</h4>
+        <ul>
+            <li><b>Zero Configuration:</b> 100% local static analysis, no third-party APIs or external AI required.</li>
+            <li><b>Batch Directory Processing:</b> Right-click any migration folder (e.g. <code>database/migrations</code>) to document entire database schemas at once.</li>
+            <li><b>Automated Relationship Mapping:</b> Infers and draws table connections (Foreign Keys, <code>constrained()</code>, and Laravel conventions).</li>
+            <li><b>Detailed Metadata:</b> Extracts primary keys (PK), foreign keys (FK), composite unique constraints, default values, and column lengths.</li>
+            <li><b>Mermaid.js & Draw.io Ready:</b> Generates clean syntax compatible with Mermaid Live Editor, Draw.io, GitHub, and Notion.</li>
+        </ul>
+
+        <hr/>
+        <p>
+            ☕ <b>Support the project:</b> If SchemaToUML saves you time documenting schemas, consider <a href="https://ko-fi.com/jesusguz">buying me a coffee on Ko-fi</a> to support continuous maintenance and new features!
+        </p>
+
+        <hr/>
+        <p><i>Generador rápido y offline de diagramas Mermaid ERD directamente desde esquemas y migraciones de Laravel al portapapeles.</i></p>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        <h4>1.0.0</h4>
+        <ul>
+            <li>Initial release.</li>
+            <li>Batch processing support for migration directories.</li>
+            <li>Automated foreign key and relationship diagramming.</li>
+            <li>Direct clipboard export for Mermaid ERDs.</li>
+        </ul>
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.jetbrains.php</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="SchemaToUML.Notification"
+                           displayType="BALLOON"/>
+    </extensions>
+
+    <actions>
+        <action id="SchemaToUmlCopyAction"
+                class="schematouml.CopyMigrationMermaidAction"
+                text="Copiar Migración como Mermaid ERD"
+                description="Genera el diagrama Mermaid de esta migración al portapapeles">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="shift alt M"/>
+        </action>
+    </actions>
+</idea-plugin>

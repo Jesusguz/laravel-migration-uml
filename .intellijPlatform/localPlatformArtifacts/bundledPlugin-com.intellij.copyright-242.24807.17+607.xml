@@ -1,0 +1,12 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.intellij.copyright" revision="242.24807.17+607"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/produccion/.gradle/caches/8.8/transforms/052b2224675de0cdea4717ddcf772c3e/transformed/PhpStorm-2024.2.5-aarch64/plugins/copyright" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledModule" name="intellij.platform.vcs.impl" rev="242.24807.17+952"/>
+  </dependencies>
+</ivy-module>
