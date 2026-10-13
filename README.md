@@ -28,7 +28,7 @@ Generador rápido, offline y privado de diagramas Entidad-Relación (ERD) en sin
 
 ## Soporte y Donaciones
 
-Si SchemaToUML te ahorra tiempo documentando arquitecturas de bases de datos, puedes apoyar el desarrollo continuo invitándome un café:
+Si SchemaToUML te ahorra tiempo documentando arquitecturas de bases de datos, puedes apoyar el desarrollo continuo con un café:
 
 [![Ko-Fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/jesusguz)
 
